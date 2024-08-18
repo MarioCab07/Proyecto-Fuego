@@ -16,6 +16,14 @@ const ActionSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Player'
     },
+    match:{
+        type: Schema.Types.ObjectId,
+        ref: 'Match'
+    },
+    team:{
+        type: Schema.Types.ObjectId,
+        ref: 'Team'
+    }
     
 },{timestamps:true});
 

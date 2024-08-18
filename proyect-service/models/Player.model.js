@@ -18,6 +18,11 @@ const PlayerSchema = new Schema({
         required: true,
         trim: true
     },
+    position:{
+        type: String,
+        required: true,
+        trim: true
+    },
     team:{
         type: Schema.Types.ObjectId,
         ref: 'Team'
