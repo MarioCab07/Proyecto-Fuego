@@ -23,6 +23,7 @@ controller.create = async (req,res,next)=>{
 
         const playerToUpdate = await Player.findById(player);
         playerToUpdate.actions.push(savedAction._id);
+        await playerToUpdate.save();
 
         return res.status(201).json({message:'Action saved',action:savedAction});
     } catch (error) {

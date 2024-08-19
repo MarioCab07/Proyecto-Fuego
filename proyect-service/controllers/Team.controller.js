@@ -23,4 +23,13 @@ controller.create = async (req,res,next)=>{
     }
 };
 
+controller.findAll = async (req,res,next)=>{
+    try {
+        const teams = await Team.find();
+        return res.status(200).json({teams});
+    } catch (error) {
+        return res.status(500).json({message:'Internal server error'});
+    }
+};
+
 module.exports = controller;
